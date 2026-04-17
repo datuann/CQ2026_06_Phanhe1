@@ -47,7 +47,7 @@ namespace CQ2026_06_Phanhe1
                     conn.Open();
                     lblStatus.Text = "Kết nối thành công";
                     MessageBox.Show("Đăng nhập Oracle thành công!");
-                    MainForm frm = new MainForm();
+                    MainForm_v2 frm = new MainForm_v2();
                     frm.Show();
                     this.Hide(); // Ẩn Login
                 }

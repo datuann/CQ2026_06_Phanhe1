@@ -731,6 +731,7 @@
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "View Privilege";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // dgvRolePrivileges
             // 

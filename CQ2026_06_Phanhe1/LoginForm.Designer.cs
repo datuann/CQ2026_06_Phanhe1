@@ -41,9 +41,10 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblUsername.Location = new System.Drawing.Point(179, 67);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(66, 16);
+            this.lblUsername.Size = new System.Drawing.Size(104, 24);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -51,18 +52,20 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblPassword.Location = new System.Drawing.Point(179, 121);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(64, 16);
+            this.lblPassword.Size = new System.Drawing.Size(100, 24);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
             // 
             // lblDatasource
             // 
             this.lblDatasource.AutoSize = true;
+            this.lblDatasource.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDatasource.Location = new System.Drawing.Point(179, 175);
             this.lblDatasource.Name = "lblDatasource";
-            this.lblDatasource.Size = new System.Drawing.Size(79, 16);
+            this.lblDatasource.Size = new System.Drawing.Size(126, 24);
             this.lblDatasource.TabIndex = 2;
             this.lblDatasource.Text = "Data Source";
             // 
@@ -72,7 +75,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(95, 22);
             this.txtUsername.TabIndex = 3;
-            this.txtUsername.Text = "system";
             // 
             // txtPassword
             // 
@@ -80,14 +82,14 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(95, 22);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "Giatuan27092005";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtDataSource
             // 
-            this.txtDataSource.Location = new System.Drawing.Point(291, 175);
+            this.txtDataSource.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDataSource.Location = new System.Drawing.Point(291, 172);
             this.txtDataSource.Name = "txtDataSource";
-            this.txtDataSource.Size = new System.Drawing.Size(154, 22);
+            this.txtDataSource.Size = new System.Drawing.Size(193, 27);
             this.txtDataSource.TabIndex = 5;
             this.txtDataSource.Text = "localhost:1521/XEPDB1";
             this.txtDataSource.TextChanged += new System.EventHandler(this.txtDatasource_TextChanged);
@@ -95,14 +97,16 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblStatus.Location = new System.Drawing.Point(329, 226);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(82, 16);
+            this.lblStatus.Size = new System.Drawing.Size(129, 24);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Chưa kết nối";
             // 
             // btnLogin
             // 
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.Location = new System.Drawing.Point(182, 221);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(112, 27);

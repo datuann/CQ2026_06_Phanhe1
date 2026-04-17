@@ -13,9 +13,9 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace CQ2026_06_Phanhe1
 {
-    public partial class MainForm : Form
+    public partial class MainForm_v2 : Form
     {
-        public MainForm()
+        public MainForm_v2()
         {
             InitializeComponent();
             InitializeGrantControls();
@@ -540,7 +540,7 @@ namespace CQ2026_06_Phanhe1
                                ORDER BY PRIVILEGE";
                 using (OracleDataAdapter da = new OracleDataAdapter(sql, conn))
                 {
-                    da.SelectCommand.Parameters.Add(":grantee", OracleDbType.Varchar2).Value = grantee.ToUpper();   
+                    da.SelectCommand.Parameters.Add(":grantee", OracleDbType.Varchar2).Value = grantee.ToUpper();
 
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -902,6 +902,74 @@ namespace CQ2026_06_Phanhe1
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefreshAll_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Load lại 2 bảng chính
+                btnLoadUsers_Click(null, null);
+                btnLoadRoles_Click(null, null);
+
+                // Refresh dữ liệu cho tab Grant
+                cmbGranteeName.Items.Clear();
+                cmbObjectName.Items.Clear();
+                cmbPrivilege.Items.Clear();
+                clbColumns.Items.Clear();
+
+                LoadRolesToComboBox(cmbRoleToGrant);
+                LoadUsersToComboBox(cmbUserReceiveRole);
+
+                // Refresh dữ liệu cho tab Revoke
+                LoadRolesToComboBox(cmbRevokeRole);
+                LoadUsersToComboBox(cmbRevokeUser);
+                LoadAllObjectNames(cmbRevokeObjectName);
+                LoadRevokePrivileges();
+
+                // Refresh dữ liệu cho tab View
+                cmbViewTargetName.Items.Clear();
+
+                MessageBox.Show("Đã tải lại dữ liệu.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi refresh dữ liệu: " + ex.Message);
+            }
+        }
+
+        private void btnQuickCreateUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabMain.SelectedTab = tabManage;
+                txtNewUsername.Clear();
+                txtNewPassword.Clear();
+                txtNewUsername.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi chuyển tới khu tạo user: " + ex.Message);
+            }
+        }
+
+        private void btnQuickCreateRole_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tabMain.SelectedTab = tabManage;
+                txtRoleName.Clear();
+                txtRoleName.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi chuyển tới khu tạo role: " + ex.Message);
+            }
+        }
+
+        private void lblCurrentLogin_Click(object sender, EventArgs e)
         {
 
         }
