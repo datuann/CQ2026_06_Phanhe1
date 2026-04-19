@@ -973,5 +973,15 @@ namespace CQ2026_06_Phanhe1
         {
 
         }
+
+        private void tabManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvSystemPrivileges_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

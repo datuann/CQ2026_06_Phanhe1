@@ -44,7 +44,7 @@
             this.lblUsername.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblUsername.Location = new System.Drawing.Point(179, 67);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(104, 24);
+            this.lblUsername.Size = new System.Drawing.Size(83, 19);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -55,7 +55,7 @@
             this.lblPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblPassword.Location = new System.Drawing.Point(179, 121);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(100, 24);
+            this.lblPassword.Size = new System.Drawing.Size(80, 19);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
             // 
@@ -65,7 +65,7 @@
             this.lblDatasource.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDatasource.Location = new System.Drawing.Point(179, 175);
             this.lblDatasource.Name = "lblDatasource";
-            this.lblDatasource.Size = new System.Drawing.Size(126, 24);
+            this.lblDatasource.Size = new System.Drawing.Size(101, 19);
             this.lblDatasource.TabIndex = 2;
             this.lblDatasource.Text = "Data Source";
             // 
@@ -91,7 +91,6 @@
             this.txtDataSource.Name = "txtDataSource";
             this.txtDataSource.Size = new System.Drawing.Size(193, 27);
             this.txtDataSource.TabIndex = 5;
-            this.txtDataSource.Text = "localhost:1521/XEPDB1";
             this.txtDataSource.TextChanged += new System.EventHandler(this.txtDatasource_TextChanged);
             // 
             // lblStatus
@@ -100,7 +99,7 @@
             this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblStatus.Location = new System.Drawing.Point(329, 226);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(129, 24);
+            this.lblStatus.Size = new System.Drawing.Size(103, 19);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Chưa kết nối";
             // 
