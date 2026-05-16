@@ -12,3 +12,7 @@ obj/
 
 # Temp files
 *.cache
+
+Debug/
+Release/
+appsettings.json
