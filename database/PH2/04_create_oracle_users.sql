@@ -1,5 +1,5 @@
 -- =========================================================
--- PHÂN HỆ 2 - CREATE TABLES
+-- PHÂN HỆ 2 - CREATE ORACLE USERS
 -- Nhóm: 06
 -- Schema: QLYTE_06
 -- Chạy bằng User QLYTE_06
