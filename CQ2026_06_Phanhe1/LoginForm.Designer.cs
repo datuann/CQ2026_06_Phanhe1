@@ -36,6 +36,8 @@
             this.txtDataSource = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.cboSubsystem = new System.Windows.Forms.ComboBox();
+            this.lblPhanHe = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -97,7 +99,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblStatus.Location = new System.Drawing.Point(329, 226);
+            this.lblStatus.Location = new System.Drawing.Point(330, 278);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(103, 19);
             this.lblStatus.TabIndex = 6;
@@ -106,7 +108,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLogin.Location = new System.Drawing.Point(182, 221);
+            this.btnLogin.Location = new System.Drawing.Point(183, 273);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(112, 27);
             this.btnLogin.TabIndex = 7;
@@ -114,11 +116,31 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // cboSubsystem
+            // 
+            this.cboSubsystem.FormattingEnabled = true;
+            this.cboSubsystem.Location = new System.Drawing.Point(291, 221);
+            this.cboSubsystem.Name = "cboSubsystem";
+            this.cboSubsystem.Size = new System.Drawing.Size(142, 24);
+            this.cboSubsystem.TabIndex = 8;
+            // 
+            // lblPhanHe
+            // 
+            this.lblPhanHe.AutoSize = true;
+            this.lblPhanHe.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPhanHe.Location = new System.Drawing.Point(179, 222);
+            this.lblPhanHe.Name = "lblPhanHe";
+            this.lblPhanHe.Size = new System.Drawing.Size(72, 19);
+            this.lblPhanHe.TabIndex = 9;
+            this.lblPhanHe.Text = "Phân Hệ";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPhanHe);
+            this.Controls.Add(this.cboSubsystem);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.txtDataSource);
@@ -144,6 +166,8 @@
         private System.Windows.Forms.TextBox txtDataSource;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.ComboBox cboSubsystem;
+        private System.Windows.Forms.Label lblPhanHe;
     }
 }
 

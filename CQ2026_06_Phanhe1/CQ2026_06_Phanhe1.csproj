@@ -83,6 +83,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAuditLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuditLog.Designer.cs">
+      <DependentUpon>FormAuditLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBenhNhan.Designer.cs">
+      <DependentUpon>FormBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDonThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDonThuoc.Designer.cs">
+      <DependentUpon>FormDonThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHSBA.Designer.cs">
+      <DependentUpon>FormHSBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHSBADV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHSBADV.Designer.cs">
+      <DependentUpon>FormHSBADV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPH2Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPH2Main.Designer.cs">
+      <DependentUpon>FormPH2Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongBao.Designer.cs">
+      <DependentUpon>FormThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +139,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAuditLog.resx">
+      <DependentUpon>FormAuditLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBenhNhan.resx">
+      <DependentUpon>FormBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDonThuoc.resx">
+      <DependentUpon>FormDonThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHSBA.resx">
+      <DependentUpon>FormHSBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHSBADV.resx">
+      <DependentUpon>FormHSBADV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPH2Main.resx">
+      <DependentUpon>FormPH2Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongBao.resx">
+      <DependentUpon>FormThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
