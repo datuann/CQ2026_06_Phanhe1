@@ -43,10 +43,10 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblUsername.Location = new System.Drawing.Point(179, 67);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(83, 19);
+            this.lblUsername.Size = new System.Drawing.Size(87, 23);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username";
             this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
@@ -54,63 +54,65 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblPassword.Location = new System.Drawing.Point(179, 121);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(80, 19);
+            this.lblPassword.Size = new System.Drawing.Size(80, 23);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
             // 
             // lblDatasource
             // 
             this.lblDatasource.AutoSize = true;
-            this.lblDatasource.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDatasource.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblDatasource.Location = new System.Drawing.Point(179, 175);
             this.lblDatasource.Name = "lblDatasource";
-            this.lblDatasource.Size = new System.Drawing.Size(101, 19);
+            this.lblDatasource.Size = new System.Drawing.Size(103, 23);
             this.lblDatasource.TabIndex = 2;
             this.lblDatasource.Text = "Data Source";
             // 
             // txtUsername
             // 
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtUsername.Location = new System.Drawing.Point(291, 67);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(95, 22);
+            this.txtUsername.Size = new System.Drawing.Size(126, 30);
             this.txtUsername.TabIndex = 3;
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPassword.Location = new System.Drawing.Point(291, 118);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(95, 22);
+            this.txtPassword.Size = new System.Drawing.Size(193, 30);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtDataSource
             // 
-            this.txtDataSource.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDataSource.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDataSource.Location = new System.Drawing.Point(291, 172);
             this.txtDataSource.Name = "txtDataSource";
-            this.txtDataSource.Size = new System.Drawing.Size(193, 27);
+            this.txtDataSource.Size = new System.Drawing.Size(193, 30);
             this.txtDataSource.TabIndex = 5;
             this.txtDataSource.TextChanged += new System.EventHandler(this.txtDatasource_TextChanged);
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblStatus.Location = new System.Drawing.Point(330, 278);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(103, 19);
+            this.lblStatus.Size = new System.Drawing.Size(107, 23);
             this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Chưa kết nối";
             // 
             // btnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLogin.Location = new System.Drawing.Point(183, 273);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(112, 27);
+            this.btnLogin.Size = new System.Drawing.Size(127, 35);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -118,19 +120,20 @@
             // 
             // cboSubsystem
             // 
+            this.cboSubsystem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cboSubsystem.FormattingEnabled = true;
             this.cboSubsystem.Location = new System.Drawing.Point(291, 221);
             this.cboSubsystem.Name = "cboSubsystem";
-            this.cboSubsystem.Size = new System.Drawing.Size(142, 24);
+            this.cboSubsystem.Size = new System.Drawing.Size(142, 31);
             this.cboSubsystem.TabIndex = 8;
             // 
             // lblPhanHe
             // 
             this.lblPhanHe.AutoSize = true;
-            this.lblPhanHe.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPhanHe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblPhanHe.Location = new System.Drawing.Point(179, 222);
             this.lblPhanHe.Name = "lblPhanHe";
-            this.lblPhanHe.Size = new System.Drawing.Size(72, 19);
+            this.lblPhanHe.Size = new System.Drawing.Size(75, 23);
             this.lblPhanHe.TabIndex = 9;
             this.lblPhanHe.Text = "Phân Hệ";
             // 

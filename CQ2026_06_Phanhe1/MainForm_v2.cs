@@ -983,5 +983,15 @@ namespace CQ2026_06_Phanhe1
         {
 
         }
+
+        private void grpRevokeRole_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabView_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
