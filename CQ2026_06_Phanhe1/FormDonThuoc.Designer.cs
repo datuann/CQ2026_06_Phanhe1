@@ -45,6 +45,9 @@
             this.lblTenThuoc = new System.Windows.Forms.Label();
             this.lblNgayDT = new System.Windows.Forms.Label();
             this.lblMaHSBA = new System.Windows.Forms.Label();
+            this.btnDeleteDonThuoc = new System.Windows.Forms.Button();
+            this.btnInsertDonThuoc = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonThuoc)).BeginInit();
             this.grpUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +58,7 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(892, 31);
+            this.btnRefresh.Location = new System.Drawing.Point(503, 12);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(115, 38);
             this.btnRefresh.TabIndex = 9;
@@ -69,7 +72,7 @@
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(762, 31);
+            this.btnLoad.Location = new System.Drawing.Point(382, 12);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(115, 38);
             this.btnLoad.TabIndex = 8;
@@ -243,12 +246,57 @@
             this.lblMaHSBA.TabIndex = 0;
             this.lblMaHSBA.Text = "Mã HSBA";
             // 
+            // btnDeleteDonThuoc
+            // 
+            this.btnDeleteDonThuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnDeleteDonThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteDonThuoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDeleteDonThuoc.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDonThuoc.Location = new System.Drawing.Point(781, 12);
+            this.btnDeleteDonThuoc.Name = "btnDeleteDonThuoc";
+            this.btnDeleteDonThuoc.Size = new System.Drawing.Size(135, 38);
+            this.btnDeleteDonThuoc.TabIndex = 23;
+            this.btnDeleteDonThuoc.Text = "Xóa đơn thuốc";
+            this.btnDeleteDonThuoc.UseVisualStyleBackColor = false;
+            this.btnDeleteDonThuoc.Click += new System.EventHandler(this.btnDeleteDonThuoc_Click);
+            // 
+            // btnInsertDonThuoc
+            // 
+            this.btnInsertDonThuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(222)))));
+            this.btnInsertDonThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertDonThuoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnInsertDonThuoc.ForeColor = System.Drawing.Color.White;
+            this.btnInsertDonThuoc.Location = new System.Drawing.Point(624, 12);
+            this.btnInsertDonThuoc.Name = "btnInsertDonThuoc";
+            this.btnInsertDonThuoc.Size = new System.Drawing.Size(151, 38);
+            this.btnInsertDonThuoc.TabIndex = 22;
+            this.btnInsertDonThuoc.Text = "Thêm đơn thuốc";
+            this.btnInsertDonThuoc.UseVisualStyleBackColor = false;
+            this.btnInsertDonThuoc.Click += new System.EventHandler(this.btnInsertDonThuoc_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(922, 14);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(110, 36);
+            this.btnClear.TabIndex = 24;
+            this.btnClear.Text = "Nhập mới";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // FormDonThuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 612);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDeleteDonThuoc);
             this.Controls.Add(this.grpUpdate);
+            this.Controls.Add(this.btnInsertDonThuoc);
             this.Controls.Add(this.dgvDonThuoc);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnLoad);
@@ -284,5 +332,8 @@
         private System.Windows.Forms.Label lblTenThuoc;
         private System.Windows.Forms.Label lblNgayDT;
         private System.Windows.Forms.Label lblMaHSBA;
+        private System.Windows.Forms.Button btnDeleteDonThuoc;
+        private System.Windows.Forms.Button btnInsertDonThuoc;
+        private System.Windows.Forms.Button btnClear;
     }
 }

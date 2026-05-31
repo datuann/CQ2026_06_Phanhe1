@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.grpUpdate = new System.Windows.Forms.GroupBox();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtMaKT = new System.Windows.Forms.TextBox();
             this.txtKetQua = new System.Windows.Forms.TextBox();
             this.txtLoaiDV = new System.Windows.Forms.TextBox();
@@ -44,9 +47,9 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.lblStatus = new System.Windows.Forms.Label();
+            this.btnDeleteDV = new System.Windows.Forms.Button();
+            this.btnInsertDV = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.grpUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSBADV)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +76,42 @@
             this.grpUpdate.TabIndex = 13;
             this.grpUpdate.TabStop = false;
             this.grpUpdate.Text = "Thông tin dịch vụ";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
+            this.lblStatus.Location = new System.Drawing.Point(671, 175);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(60, 23);
+            this.lblStatus.TabIndex = 21;
+            this.lblStatus.Text = "Status";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(849, 121);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(107, 36);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(675, 120);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(159, 39);
+            this.btnUpdate.TabIndex = 15;
+            this.btnUpdate.Text = "Cập nhật kết quả";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtMaKT
             // 
@@ -119,7 +158,7 @@
             this.lblKetQua.AutoSize = true;
             this.lblKetQua.Location = new System.Drawing.Point(25, 120);
             this.lblKetQua.Name = "lblKetQua";
-            this.lblKetQua.Size = new System.Drawing.Size(90, 29);
+            this.lblKetQua.Size = new System.Drawing.Size(72, 23);
             this.lblKetQua.TabIndex = 4;
             this.lblKetQua.Text = "Kết quả";
             // 
@@ -128,7 +167,7 @@
             this.lblMaKT.AutoSize = true;
             this.lblMaKT.Location = new System.Drawing.Point(330, 75);
             this.lblMaKT.Name = "lblMaKT";
-            this.lblMaKT.Size = new System.Drawing.Size(76, 29);
+            this.lblMaKT.Size = new System.Drawing.Size(61, 23);
             this.lblMaKT.TabIndex = 3;
             this.lblMaKT.Text = "Mã KT";
             // 
@@ -137,7 +176,7 @@
             this.lblNgayDV.AutoSize = true;
             this.lblNgayDV.Location = new System.Drawing.Point(25, 75);
             this.lblNgayDV.Name = "lblNgayDV";
-            this.lblNgayDV.Size = new System.Drawing.Size(101, 29);
+            this.lblNgayDV.Size = new System.Drawing.Size(81, 23);
             this.lblNgayDV.TabIndex = 2;
             this.lblNgayDV.Text = "Ngày DV";
             // 
@@ -184,7 +223,7 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(891, 16);
+            this.btnRefresh.Location = new System.Drawing.Point(531, 11);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(115, 38);
             this.btnRefresh.TabIndex = 11;
@@ -198,7 +237,7 @@
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(761, 16);
+            this.btnLoad.Location = new System.Drawing.Point(410, 11);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(115, 38);
             this.btnLoad.TabIndex = 10;
@@ -228,47 +267,56 @@
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "QUẢN LÝ DỊCH VỤ KỸ THUẬT";
             // 
-            // btnUpdate
+            // btnDeleteDV
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(709, 119);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(159, 39);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Cập nhật kết quả";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnDeleteDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnDeleteDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteDV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDeleteDV.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDV.Location = new System.Drawing.Point(797, 11);
+            this.btnDeleteDV.Name = "btnDeleteDV";
+            this.btnDeleteDV.Size = new System.Drawing.Size(110, 36);
+            this.btnDeleteDV.TabIndex = 15;
+            this.btnDeleteDV.Text = "Xóa dịch vụ";
+            this.btnDeleteDV.UseVisualStyleBackColor = false;
+            this.btnDeleteDV.Click += new System.EventHandler(this.btnDeleteDV_Click);
             // 
-            // btnClose
+            // btnInsertDV
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(883, 120);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(107, 36);
-            this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "Đóng";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnInsertDV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(222)))));
+            this.btnInsertDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertDV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnInsertDV.ForeColor = System.Drawing.Color.White;
+            this.btnInsertDV.Location = new System.Drawing.Point(652, 11);
+            this.btnInsertDV.Name = "btnInsertDV";
+            this.btnInsertDV.Size = new System.Drawing.Size(137, 36);
+            this.btnInsertDV.TabIndex = 14;
+            this.btnInsertDV.Text = "Thêm dịch vụ";
+            this.btnInsertDV.UseVisualStyleBackColor = false;
+            this.btnInsertDV.Click += new System.EventHandler(this.btnInsertDV_Click);
             // 
-            // lblStatus
+            // btnClear
             // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
-            this.lblStatus.Location = new System.Drawing.Point(705, 174);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(60, 23);
-            this.lblStatus.TabIndex = 21;
-            this.lblStatus.Text = "Status";
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(913, 12);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(110, 36);
+            this.btnClear.TabIndex = 16;
+            this.btnClear.Text = "Nhập mới";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // FormHSBADV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1035, 633);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDeleteDV);
+            this.Controls.Add(this.btnInsertDV);
             this.Controls.Add(this.grpUpdate);
             this.Controls.Add(this.dgvHSBADV);
             this.Controls.Add(this.btnRefresh);
@@ -308,5 +356,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnDeleteDV;
+        private System.Windows.Forms.Button btnInsertDV;
+        private System.Windows.Forms.Button btnClear;
     }
 }

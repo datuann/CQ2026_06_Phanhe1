@@ -124,7 +124,7 @@
             this.cboSubsystem.FormattingEnabled = true;
             this.cboSubsystem.Location = new System.Drawing.Point(291, 221);
             this.cboSubsystem.Name = "cboSubsystem";
-            this.cboSubsystem.Size = new System.Drawing.Size(142, 31);
+            this.cboSubsystem.Size = new System.Drawing.Size(226, 31);
             this.cboSubsystem.TabIndex = 8;
             // 
             // lblPhanHe

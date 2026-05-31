@@ -45,6 +45,7 @@
             this.btnAudit = new System.Windows.Forms.Button();
             this.lblSecutityNote = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.btnNhanVienCaNhan = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pblUserInfo.SuspendLayout();
             this.flpMenu.SuspendLayout();
@@ -150,10 +151,11 @@
             this.flpMenu.Controls.Add(this.btnDonThuoc);
             this.flpMenu.Controls.Add(this.btnThongBao);
             this.flpMenu.Controls.Add(this.btnAudit);
+            this.flpMenu.Controls.Add(this.btnNhanVienCaNhan);
             this.flpMenu.Location = new System.Drawing.Point(43, 301);
             this.flpMenu.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.flpMenu.Name = "flpMenu";
-            this.flpMenu.Size = new System.Drawing.Size(1023, 315);
+            this.flpMenu.Size = new System.Drawing.Size(1060, 315);
             this.flpMenu.TabIndex = 2;
             // 
             // btnBenhNhan
@@ -203,7 +205,7 @@
             this.btnDonThuoc.BackColor = System.Drawing.Color.White;
             this.btnDonThuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonThuoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDonThuoc.Location = new System.Drawing.Point(10, 131);
+            this.btnDonThuoc.Location = new System.Drawing.Point(779, 10);
             this.btnDonThuoc.Margin = new System.Windows.Forms.Padding(10);
             this.btnDonThuoc.Name = "btnDonThuoc";
             this.btnDonThuoc.Size = new System.Drawing.Size(237, 101);
@@ -217,7 +219,7 @@
             this.btnThongBao.BackColor = System.Drawing.Color.White;
             this.btnThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnThongBao.Location = new System.Drawing.Point(267, 131);
+            this.btnThongBao.Location = new System.Drawing.Point(10, 131);
             this.btnThongBao.Margin = new System.Windows.Forms.Padding(10);
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.Size = new System.Drawing.Size(235, 101);
@@ -231,7 +233,7 @@
             this.btnAudit.BackColor = System.Drawing.Color.White;
             this.btnAudit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAudit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAudit.Location = new System.Drawing.Point(522, 131);
+            this.btnAudit.Location = new System.Drawing.Point(265, 131);
             this.btnAudit.Margin = new System.Windows.Forms.Padding(10);
             this.btnAudit.Name = "btnAudit";
             this.btnAudit.Size = new System.Drawing.Size(237, 101);
@@ -261,6 +263,20 @@
             this.lblStatus.Size = new System.Drawing.Size(60, 25);
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "Status";
+            // 
+            // btnNhanVienCaNhan
+            // 
+            this.btnNhanVienCaNhan.BackColor = System.Drawing.Color.White;
+            this.btnNhanVienCaNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVienCaNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnNhanVienCaNhan.Location = new System.Drawing.Point(522, 131);
+            this.btnNhanVienCaNhan.Margin = new System.Windows.Forms.Padding(10);
+            this.btnNhanVienCaNhan.Name = "btnNhanVienCaNhan";
+            this.btnNhanVienCaNhan.Size = new System.Drawing.Size(237, 101);
+            this.btnNhanVienCaNhan.TabIndex = 6;
+            this.btnNhanVienCaNhan.Text = "Thông tin cá nhân";
+            this.btnNhanVienCaNhan.UseVisualStyleBackColor = false;
+            this.btnNhanVienCaNhan.Click += new System.EventHandler(this.btnNhanVienCaNhan_Click);
             // 
             // FormPH2Main
             // 
@@ -308,5 +324,6 @@
         private System.Windows.Forms.Button btnAudit;
         private System.Windows.Forms.Label lblSecutityNote;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnNhanVienCaNhan;
     }
 }

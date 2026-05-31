@@ -55,12 +55,14 @@ namespace CQ2026_06_Phanhe1
             btnDonThuoc.Visible = false;
             btnThongBao.Visible = false;
             btnAudit.Visible = false;
+            btnNhanVienCaNhan.Visible = false;
 
             if (_role == "Điều phối viên")
             {
                 btnBenhNhan.Visible = true;
                 btnHSBA.Visible = true;
                 btnHSBADV.Visible = true;
+                btnNhanVienCaNhan.Visible = true;
             }
             else if (_role == "Bác sĩ/Y sĩ")
             {
@@ -68,10 +70,12 @@ namespace CQ2026_06_Phanhe1
                 btnHSBA.Visible = true;
                 btnHSBADV.Visible = true;
                 btnDonThuoc.Visible = true;
+                btnNhanVienCaNhan.Visible = true;
             }
             else if (_role == "Kỹ thuật viên")
             {
                 btnHSBADV.Visible = true;
+                btnNhanVienCaNhan.Visible = true;
             }
             else if (_role == "Bệnh nhân")
             {
@@ -109,26 +113,26 @@ namespace CQ2026_06_Phanhe1
 
         private void btnBenhNhan_Click(object sender, EventArgs e)
         {
-            FormBenhNhan frm = new FormBenhNhan(_connStr);
+            FormBenhNhan frm = new FormBenhNhan(_connStr, _role);
             frm.ShowDialog();
         }
 
         private void btnHSBA_Click(object sender, EventArgs e)
         {
         
-            FormHSBA frm = new FormHSBA(_connStr);
+            FormHSBA frm = new FormHSBA(_connStr, _role);
             frm.ShowDialog();
         }
 
         private void btnHSBADV_Click(object sender, EventArgs e)
         {
-            FormHSBADV frm = new FormHSBADV(_connStr);
+            FormHSBADV frm = new FormHSBADV(_connStr, _role);
             frm.ShowDialog();
         }
 
         private void btnDonThuoc_Click(object sender, EventArgs e)
         {
-            FormDonThuoc frm = new FormDonThuoc(_connStr);
+            FormDonThuoc frm = new FormDonThuoc(_connStr, _role);
             frm.ShowDialog();
         }
 
@@ -141,6 +145,11 @@ namespace CQ2026_06_Phanhe1
         private void btnAudit_Click(object sender, EventArgs e)
         {
             FormAuditLog frm = new FormAuditLog(_connStr);
+            frm.ShowDialog();
+        }
+        private void btnNhanVienCaNhan_Click(object sender, EventArgs e)
+        {
+            FormNhanVienCaNhan frm = new FormNhanVienCaNhan(_connStr);
             frm.ShowDialog();
         }
     }

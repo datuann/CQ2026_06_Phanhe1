@@ -30,8 +30,6 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.dgvHSBA = new System.Windows.Forms.DataGridView();
             this.grpUpdate = new System.Windows.Forms.GroupBox();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -53,6 +51,10 @@
             this.lbMaBS = new System.Windows.Forms.Label();
             this.lblMaBN = new System.Windows.Forms.Label();
             this.lblMaHSBA = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnInsertHSBA = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSBA)).BeginInit();
             this.grpUpdate.SuspendLayout();
             this.SuspendLayout();
@@ -78,34 +80,6 @@
             this.lblSubtitle.Size = new System.Drawing.Size(381, 23);
             this.lblSubtitle.TabIndex = 1;
             this.lblSubtitle.Text = "Dữ liệu được lọc theo RBAC/VPD trong Oracle";
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(910, 30);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(115, 38);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "Làm mới";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(222)))));
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Location = new System.Drawing.Point(780, 30);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(115, 38);
-            this.btnLoad.TabIndex = 4;
-            this.btnLoad.Text = "Tải dữ liệu";
-            this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // dgvHSBA
             // 
@@ -328,16 +302,72 @@
             this.lblMaHSBA.TabIndex = 0;
             this.lblMaHSBA.Text = "Mã HSBA";
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(859, 23);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(110, 36);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "Nhập mới";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnInsertHSBA
+            // 
+            this.btnInsertHSBA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(222)))));
+            this.btnInsertHSBA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertHSBA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnInsertHSBA.ForeColor = System.Drawing.Color.White;
+            this.btnInsertHSBA.Location = new System.Drawing.Point(716, 23);
+            this.btnInsertHSBA.Name = "btnInsertHSBA";
+            this.btnInsertHSBA.Size = new System.Drawing.Size(122, 36);
+            this.btnInsertHSBA.TabIndex = 10;
+            this.btnInsertHSBA.Text = "Thêm HSBA";
+            this.btnInsertHSBA.UseVisualStyleBackColor = false;
+            this.btnInsertHSBA.Click += new System.EventHandler(this.btnInsertHSBA_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(589, 23);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(110, 36);
+            this.btnRefresh.TabIndex = 9;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(222)))));
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnLoad.ForeColor = System.Drawing.Color.White;
+            this.btnLoad.Location = new System.Drawing.Point(463, 23);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(110, 36);
+            this.btnLoad.TabIndex = 8;
+            this.btnLoad.Text = "Tải dữ liệu";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            // 
             // FormHSBA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1062, 673);
-            this.Controls.Add(this.grpUpdate);
-            this.Controls.Add(this.dgvHSBA);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnInsertHSBA);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.grpUpdate);
+            this.Controls.Add(this.dgvHSBA);
             this.Controls.Add(this.lblSubtitle);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -358,8 +388,6 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSubtitle;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.DataGridView dgvHSBA;
         private System.Windows.Forms.GroupBox grpUpdate;
         private System.Windows.Forms.Label lblStatus;
@@ -381,5 +409,9 @@
         private System.Windows.Forms.Label lbMaBS;
         private System.Windows.Forms.Label lblMaBN;
         private System.Windows.Forms.Label lblMaHSBA;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnInsertHSBA;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnLoad;
     }
 }

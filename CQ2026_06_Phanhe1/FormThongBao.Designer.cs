@@ -83,7 +83,7 @@
             this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(114)))), ((int)(((byte)(128)))));
             this.lblSubtitle.Location = new System.Drawing.Point(29, 63);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(446, 29);
+            this.lblSubtitle.Size = new System.Drawing.Size(357, 23);
             this.lblSubtitle.TabIndex = 11;
             this.lblSubtitle.Text = "Dữ liệu được lọc theo Oracle Label Security";
             // 
@@ -130,7 +130,7 @@
             this.grpDetail.Controls.Add(this.lblNgayGio);
             this.grpDetail.Controls.Add(this.lblMaTB);
             this.grpDetail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.grpDetail.Location = new System.Drawing.Point(33, 352);
+            this.grpDetail.Location = new System.Drawing.Point(33, 353);
             this.grpDetail.Name = "grpDetail";
             this.grpDetail.Size = new System.Drawing.Size(976, 210);
             this.grpDetail.TabIndex = 15;
@@ -198,7 +198,7 @@
             this.lblNoiDung.AutoSize = true;
             this.lblNoiDung.Location = new System.Drawing.Point(25, 119);
             this.lblNoiDung.Name = "lblNoiDung";
-            this.lblNoiDung.Size = new System.Drawing.Size(106, 29);
+            this.lblNoiDung.Size = new System.Drawing.Size(85, 23);
             this.lblNoiDung.TabIndex = 3;
             this.lblNoiDung.Text = "Nội dung";
             // 
@@ -207,7 +207,7 @@
             this.lblDiaDiem.AutoSize = true;
             this.lblDiaDiem.Location = new System.Drawing.Point(25, 75);
             this.lblDiaDiem.Name = "lblDiaDiem";
-            this.lblDiaDiem.Size = new System.Drawing.Size(104, 29);
+            this.lblDiaDiem.Size = new System.Drawing.Size(83, 23);
             this.lblDiaDiem.TabIndex = 2;
             this.lblDiaDiem.Text = "Địa điểm";
             // 
@@ -216,7 +216,7 @@
             this.lblNgayGio.AutoSize = true;
             this.lblNgayGio.Location = new System.Drawing.Point(330, 35);
             this.lblNgayGio.Name = "lblNgayGio";
-            this.lblNgayGio.Size = new System.Drawing.Size(105, 29);
+            this.lblNgayGio.Size = new System.Drawing.Size(84, 23);
             this.lblNgayGio.TabIndex = 1;
             this.lblNgayGio.Text = "Ngày giờ";
             // 
@@ -225,7 +225,7 @@
             this.lblMaTB.AutoSize = true;
             this.lblMaTB.Location = new System.Drawing.Point(25, 35);
             this.lblMaTB.Name = "lblMaTB";
-            this.lblMaTB.Size = new System.Drawing.Size(76, 29);
+            this.lblMaTB.Size = new System.Drawing.Size(61, 23);
             this.lblMaTB.TabIndex = 0;
             this.lblMaTB.Text = "Mã TB";
             // 

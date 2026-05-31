@@ -113,6 +113,12 @@
     <Compile Include="FormHSBADV.Designer.cs">
       <DependentUpon>FormHSBADV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNhanVienCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVienCaNhan.Designer.cs">
+      <DependentUpon>FormNhanVienCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPH2Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHSBADV.resx">
       <DependentUpon>FormHSBADV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVienCaNhan.resx">
+      <DependentUpon>FormNhanVienCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPH2Main.resx">
       <DependentUpon>FormPH2Main.cs</DependentUpon>
