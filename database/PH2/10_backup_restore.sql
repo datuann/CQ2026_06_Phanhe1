@@ -58,7 +58,7 @@ END;
 /
 
 -- Backup:
--- expdp system/Giatuan27092005@localhost:1521/XEPDB1 schemas=QLYTE_06 directory=PH2_BACKUP_DIR dumpfile=qlyte06_backup.dmp logfile=qlyte06_backup.log
+-- expdp "'sys/<SYS_PASSWORD>@localhost:1521/XEPDB1 as sysdba'" schemas=QLYTE_06 directory=PH2_BACKUP_DIR dumpfile=qlyte06_backup_20260527_final_sys.dmp logfile=qlyte06_backup_20260527_final_sys.log
 
 -- Backup thành công, D\oracle_backup:
 -- qlyte06_backup.dmp
@@ -99,27 +99,27 @@ GRANT CREATE SEQUENCE TO QLYTE_06_RESTORE;
 ALTER USER QLYTE_06_RESTORE QUOTA UNLIMITED ON USERS;
 
 -- Chạy trong CMD/PowerShell:
--- impdp system/Giatuan27092005@localhost:1521/XEPDB1 schemas=QLYTE_06 remap_schema=QLYTE_06:QLYTE_06_RESTORE directory=PH2_BACKUP_DIR dumpfile=qlyte06_backup.dmp logfile=qlyte06_restore_remap.log
+-- impdp system/<your_password>@localhost:1521/XEPDB1 schemas=QLYTE_06 remap_schema=QLYTE_06:QLYTE_06_RESTORE directory=PH2_BACKUP_DIR dumpfile=qlyte06_backup.dmp logfile=qlyte06_restore_remap.log
 
 -- =========================================================
 -- PHẦN F - KIỂM TRA SAU KHI RESTORE
 -- =========================================================
 
--- Restore sang schema QLYTE_06_RESTORE: chạy bằng QLYTE_06_RESTORE
--- CONNECT QLYTE_06_RESTORE/123@localhost:1521/XEPDB1;
+-- Restore sang schema QLYTE_06_RESTORE: 
 
-SELECT 'BENHNHAN' AS TABLE_NAME, COUNT(*) AS SO_DONG FROM BENHNHAN
-UNION ALL
-SELECT 'NHANVIEN', COUNT(*) FROM NHANVIEN
-UNION ALL
-SELECT 'HSBA', COUNT(*) FROM HSBA
-UNION ALL
-SELECT 'HSBA_DV', COUNT(*) FROM HSBA_DV
-UNION ALL
-SELECT 'DONTHUOC', COUNT(*) FROM DONTHUOC
-UNION ALL
-SELECT 'THONGBAO', COUNT(*) FROM THONGBAO;
+CONNECT SYS/<your_password>@localhost:1521/XEPDB1 AS SYSDBA;
 
+SELECT 'BENHNHAN' AS TABLE_NAME, COUNT(*) AS SO_DONG FROM QLYTE_06_RESTORE.BENHNHAN
+UNION ALL
+SELECT 'NHANVIEN', COUNT(*) FROM QLYTE_06_RESTORE.NHANVIEN
+UNION ALL
+SELECT 'HSBA', COUNT(*) FROM QLYTE_06_RESTORE.HSBA
+UNION ALL
+SELECT 'HSBA_DV', COUNT(*) FROM QLYTE_06_RESTORE.HSBA_DV
+UNION ALL
+SELECT 'DONTHUOC', COUNT(*) FROM QLYTE_06_RESTORE.DONTHUOC
+UNION ALL
+SELECT 'THONGBAO', COUNT(*) FROM QLYTE_06_RESTORE.THONGBAO;
 
 -- =========================================================
 -- PHẦN G - MÔ TẢ QUY TRÌNH SAU KHI XẢY RA SỰ CỐ

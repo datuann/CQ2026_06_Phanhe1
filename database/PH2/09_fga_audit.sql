@@ -76,7 +76,7 @@ BEGIN
         object_name     => 'DONTHUOC',
         policy_name     => 'FGA_DONTHUOC_UPDATE',
         audit_condition => NULL,
-        audit_column    => 'NGAYDT,TENTHUOC,LIEUDUNG',
+        audit_column    => 'TENTHUOC,LIEUDUNG',
         statement_types => 'UPDATE',
         audit_trail     => DBMS_FGA.DB + DBMS_FGA.EXTENDED
     );
@@ -133,4 +133,19 @@ FROM DBA_FGA_AUDIT_TRAIL
 WHERE OBJECT_SCHEMA = 'QLYTE_06'
   AND OBJECT_NAME IN ('DONTHUOC', 'HSBA', 'HSBA_DV')
 ORDER BY TIMESTAMP DESC;
+
+
+
+SELECT DB_USER,
+       OBJECT_SCHEMA,
+       OBJECT_NAME,
+       POLICY_NAME,
+       STATEMENT_TYPE,
+       SQL_TEXT,
+       TIMESTAMP
+FROM DBA_FGA_AUDIT_TRAIL
+WHERE OBJECT_SCHEMA = 'QLYTE_06'
+  AND OBJECT_NAME = 'DONTHUOC'
+ORDER BY TIMESTAMP DESC;
+
 

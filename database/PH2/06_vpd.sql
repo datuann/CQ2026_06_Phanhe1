@@ -99,6 +99,17 @@ EXCEPTION
 END;
 /
 
+BEGIN
+    DBMS_RLS.DROP_POLICY(
+        object_schema => 'QLYTE_06',
+        object_name   => 'NHANVIEN',
+        policy_name   => 'POL_NHANVIEN_SELF'
+    );
+EXCEPTION
+    WHEN OTHERS THEN
+        NULL;
+END;
+/
 -- =========================================================
 -- FUNCTION: LẤY ROLE USER HIỆN TẠI TRONG NHANVIEN
 -- =========================================================
@@ -205,7 +216,7 @@ BEGIN
             v_role := NULL;
     END;
     
-    IF v_role = N'Diều phối viên' THEN
+    IF v_role = N'Điều phối viên' THEN
         RETURN '1=1';
     ELSIF v_role = N'Bác sĩ/Y sĩ' THEN
         RETURN 'MABS = (
@@ -230,7 +241,7 @@ END;
 -- Logic:
 -- QLYTE_06, SYS: thấy tất cả
 -- ROLE_DIEUPHOIVIEN: thấy tất cả đề điều phối KTV
--- ROLE_BACSI: thấy dịch HSBA thuộc mình phụ trách
+-- ROLE_BACSI: thấy dịch vụ HSBA thuộc mình phụ trách
 -- ROLE_KYTHUATVIEN: chỉ thấy dịch vụ mình được phân công
 -- =========================================================
 
@@ -248,8 +259,8 @@ BEGIN
     IF v_user IN ('SYS', 'SYSTEM', 'QLYTE_06') THEN
         RETURN '1=1';
     END IF;
-    
-    BEGIN 
+
+    BEGIN
         SELECT VAITRO
         INTO v_role
         FROM QLYTE_06.NHANVIEN
@@ -258,23 +269,26 @@ BEGIN
         WHEN NO_DATA_FOUND THEN
             v_role := NULL;
     END;
-    
+
     IF v_role = N'Điều phối viên' THEN
         RETURN '1=1';
+
     ELSIF v_role = N'Bác sĩ/Y sĩ' THEN
         RETURN 'MAHSBA IN (
-                        SELECT H.MAHSBA
-                        FROM QLYTE_06.HSBA H
-                        JOIN QLYTE_05.NHANVIEN NV ON H.MABS = NV.MANV
-                        WHERE NV.USERNAME = SYS_CONTEXT(''USERENV'', ''SESSION_USER'')
-                    )';
+                    SELECT H.MAHSBA
+                    FROM QLYTE_06.HSBA H
+                    JOIN QLYTE_06.NHANVIEN NV ON H.MABS = NV.MANV
+                    WHERE NV.USERNAME = SYS_CONTEXT(''USERENV'', ''SESSION_USER'')
+                )';
+
     ELSIF v_role = N'Kỹ thuật viên' THEN
-        RETURN 'MAKT = (
+        RETURN 'MAKT IN (
                     SELECT MANV
                     FROM QLYTE_06.NHANVIEN
                     WHERE USERNAME = SYS_CONTEXT(''USERENV'', ''SESSION_USER'')
                 )';
-    ELSE 
+
+    ELSE
         RETURN '1=0';
     END IF;
 END;
@@ -328,6 +342,24 @@ BEGIN
                         WHERE BN.USERNAME = SYS_CONTEXT(''USERENV'', ''SESSION_USER'')
                     )';
     END IF;
+END;
+/
+
+CREATE OR REPLACE FUNCTION FN_VPD_NHANVIEN(
+    schema_name VARCHAR2,
+    object_name VARCHAR2
+)
+RETURN VARCHAR2
+AS
+    v_user VARCHAR2(30);
+BEGIN 
+    v_user := SYS_CONTEXT('USERENV', 'SESSION_USER');
+    
+    IF v_user IN ('SYS', 'SYSTEM', 'QLYTE_06') THEN
+        RETURN '1=1';
+    END IF;
+    
+    RETURN 'USERNAME = SYS_CONTEXT(''USERENV'', ''SESSION_USER'')';
 END;
 /
 
@@ -387,6 +419,18 @@ BEGIN
 END;
 /
 
+BEGIN
+    DBMS_RLS.ADD_POLICY(
+        object_schema   => 'QLYTE_06',
+        object_name     => 'NHANVIEN',
+        policy_name     => 'POL_NHANVIEN_SELF',
+        function_schema => 'QLYTE_06',
+        policy_function => 'FN_VPD_NHANVIEN',
+        statement_types => 'SELECT, UPDATE',
+        update_check    => TRUE
+    );
+END;
+/
 -- =========================================================
 -- KIỂM TRA CÁC POLICY ĐÃ GẮN
 -- =========================================================
@@ -419,3 +463,4 @@ UNION ALL
 SELECT 'DONTHUOC', COUNT(*) FROM DONTHUOC
 UNION ALL
 SELECT 'THONGBAO', COUNT(*) FROM THONGBAO;
+
