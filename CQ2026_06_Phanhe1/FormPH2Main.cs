@@ -119,7 +119,7 @@ namespace CQ2026_06_Phanhe1
 
         private void btnHSBA_Click(object sender, EventArgs e)
         {
-        
+
             FormHSBA frm = new FormHSBA(_connStr, _role);
             frm.ShowDialog();
         }

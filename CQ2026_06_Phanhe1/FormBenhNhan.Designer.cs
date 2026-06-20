@@ -34,6 +34,12 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvBenhNhan = new System.Windows.Forms.DataGridView();
             this.grpUpdate = new System.Windows.Forms.GroupBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
+            this.txtPhai = new System.Windows.Forms.TextBox();
+            this.lblCCCD = new System.Windows.Forms.Label();
+            this.lblNgaySinh = new System.Windows.Forms.Label();
+            this.lblPhai = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -55,12 +61,6 @@
             this.lblSoNha = new System.Windows.Forms.Label();
             this.lblTenBN = new System.Windows.Forms.Label();
             this.lblMaBN = new System.Windows.Forms.Label();
-            this.lblPhai = new System.Windows.Forms.Label();
-            this.lblNgaySinh = new System.Windows.Forms.Label();
-            this.lblCCCD = new System.Windows.Forms.Label();
-            this.txtPhai = new System.Windows.Forms.TextBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
-            this.txtCCCD = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBenhNhan)).BeginInit();
@@ -174,6 +174,57 @@
             this.grpUpdate.TabStop = false;
             this.grpUpdate.Text = "Thông tin cập nhật";
             this.grpUpdate.Enter += new System.EventHandler(this.grpUpdate_Enter);
+            // 
+            // txtCCCD
+            // 
+            this.txtCCCD.Location = new System.Drawing.Point(430, 78);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.ReadOnly = true;
+            this.txtCCCD.Size = new System.Drawing.Size(160, 30);
+            this.txtCCCD.TabIndex = 26;
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Location = new System.Drawing.Point(125, 81);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.ReadOnly = true;
+            this.txtNgaySinh.Size = new System.Drawing.Size(160, 30);
+            this.txtNgaySinh.TabIndex = 25;
+            // 
+            // txtPhai
+            // 
+            this.txtPhai.Location = new System.Drawing.Point(771, 35);
+            this.txtPhai.Name = "txtPhai";
+            this.txtPhai.ReadOnly = true;
+            this.txtPhai.Size = new System.Drawing.Size(160, 30);
+            this.txtPhai.TabIndex = 24;
+            // 
+            // lblCCCD
+            // 
+            this.lblCCCD.AutoSize = true;
+            this.lblCCCD.Location = new System.Drawing.Point(330, 81);
+            this.lblCCCD.Name = "lblCCCD";
+            this.lblCCCD.Size = new System.Drawing.Size(54, 23);
+            this.lblCCCD.TabIndex = 23;
+            this.lblCCCD.Text = "CCCD";
+            // 
+            // lblNgaySinh
+            // 
+            this.lblNgaySinh.AutoSize = true;
+            this.lblNgaySinh.Location = new System.Drawing.Point(10, 81);
+            this.lblNgaySinh.Name = "lblNgaySinh";
+            this.lblNgaySinh.Size = new System.Drawing.Size(89, 23);
+            this.lblNgaySinh.TabIndex = 22;
+            this.lblNgaySinh.Text = "Ngày sinh";
+            // 
+            // lblPhai
+            // 
+            this.lblPhai.AutoSize = true;
+            this.lblPhai.Location = new System.Drawing.Point(700, 35);
+            this.lblPhai.Name = "lblPhai";
+            this.lblPhai.Size = new System.Drawing.Size(44, 23);
+            this.lblPhai.TabIndex = 21;
+            this.lblPhai.Text = "Phái";
             // 
             // lblStatus
             // 
@@ -360,57 +411,6 @@
             this.lblMaBN.Size = new System.Drawing.Size(64, 23);
             this.lblMaBN.TabIndex = 0;
             this.lblMaBN.Text = "Mã BN";
-            // 
-            // lblPhai
-            // 
-            this.lblPhai.AutoSize = true;
-            this.lblPhai.Location = new System.Drawing.Point(700, 35);
-            this.lblPhai.Name = "lblPhai";
-            this.lblPhai.Size = new System.Drawing.Size(44, 23);
-            this.lblPhai.TabIndex = 21;
-            this.lblPhai.Text = "Phái";
-            // 
-            // lblNgaySinh
-            // 
-            this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.Location = new System.Drawing.Point(10, 81);
-            this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(89, 23);
-            this.lblNgaySinh.TabIndex = 22;
-            this.lblNgaySinh.Text = "Ngày sinh";
-            // 
-            // lblCCCD
-            // 
-            this.lblCCCD.AutoSize = true;
-            this.lblCCCD.Location = new System.Drawing.Point(330, 81);
-            this.lblCCCD.Name = "lblCCCD";
-            this.lblCCCD.Size = new System.Drawing.Size(54, 23);
-            this.lblCCCD.TabIndex = 23;
-            this.lblCCCD.Text = "CCCD";
-            // 
-            // txtPhai
-            // 
-            this.txtPhai.Location = new System.Drawing.Point(771, 35);
-            this.txtPhai.Name = "txtPhai";
-            this.txtPhai.ReadOnly = true;
-            this.txtPhai.Size = new System.Drawing.Size(160, 30);
-            this.txtPhai.TabIndex = 24;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(125, 81);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.ReadOnly = true;
-            this.txtNgaySinh.Size = new System.Drawing.Size(160, 30);
-            this.txtNgaySinh.TabIndex = 25;
-            // 
-            // txtCCCD
-            // 
-            this.txtCCCD.Location = new System.Drawing.Point(430, 78);
-            this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.ReadOnly = true;
-            this.txtCCCD.Size = new System.Drawing.Size(160, 30);
-            this.txtCCCD.TabIndex = 26;
             // 
             // btnClear
             // 

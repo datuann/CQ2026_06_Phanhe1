@@ -554,11 +554,12 @@
             // btnGrantPrivilege
             // 
             this.btnGrantPrivilege.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnGrantPrivilege.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnGrantPrivilege.Location = new System.Drawing.Point(423, 735);
+            this.btnGrantPrivilege.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrantPrivilege.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnGrantPrivilege.Location = new System.Drawing.Point(254, 530);
             this.btnGrantPrivilege.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnGrantPrivilege.Name = "btnGrantPrivilege";
-            this.btnGrantPrivilege.Size = new System.Drawing.Size(213, 44);
+            this.btnGrantPrivilege.Size = new System.Drawing.Size(162, 38);
             this.btnGrantPrivilege.TabIndex = 13;
             this.btnGrantPrivilege.Text = "Grant Privilege";
             this.btnGrantPrivilege.UseVisualStyleBackColor = false;
@@ -579,7 +580,7 @@
             // 
             this.lblColumns.AutoSize = true;
             this.lblColumns.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblColumns.Location = new System.Drawing.Point(125, 344);
+            this.lblColumns.Location = new System.Drawing.Point(126, 330);
             this.lblColumns.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblColumns.Name = "lblColumns";
             this.lblColumns.Size = new System.Drawing.Size(77, 23);
@@ -590,7 +591,7 @@
             // 
             this.clbColumns.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.clbColumns.FormattingEnabled = true;
-            this.clbColumns.Location = new System.Drawing.Point(130, 388);
+            this.clbColumns.Location = new System.Drawing.Point(129, 370);
             this.clbColumns.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.clbColumns.Name = "clbColumns";
             this.clbColumns.Size = new System.Drawing.Size(400, 154);
